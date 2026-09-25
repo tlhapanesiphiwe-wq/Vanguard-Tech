@@ -1,0 +1,47 @@
+<svg viewBox="0 0 500 480" width="500" height="480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="ribbonShadowFull" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="-3" dy="4" stdDeviation="3.5" flood-color="#0E1F35" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Group translated to center mark: canvas center is X=250. Mark width is 260 (from 50 to 310, center at 180). Shift by +70 to center at 250 -->
+  <g transform="translate(70, 20)">
+    <!-- Left Chevron (Navy #18365B) -->
+    <path
+      d="M 140 220 L 50 48 L 88 72 L 80 84 L 140 168 L 200 84 L 192 72 L 230 48 Z"
+      fill="#18365B"
+    />
+
+    <!-- Right Chevron (Slate Blue #4C6E8E) with shadow on the overlap -->
+    <path
+      d="M 220 220 L 130 48 L 168 72 L 160 84 L 220 168 L 280 84 L 272 72 L 310 48 Z"
+      fill="#4C6E8E"
+      filter="url(#ribbonShadowFull)"
+    />
+  </g>
+
+  <!-- Wordmark -->
+  <text
+    x="250"
+    y="325"
+    text-anchor="middle"
+    font-family="Space Grotesk, Plus Jakarta Sans, system-ui, sans-serif"
+    font-size="38"
+    font-weight="800"
+    letter-spacing="6"
+    fill="#18365B"
+  >VANGUARD TECH</text>
+
+  <!-- Subtitle -->
+  <text
+    x="250"
+    y="368"
+    text-anchor="middle"
+    font-family="Plus Jakarta Sans, system-ui, sans-serif"
+    font-size="16"
+    font-weight="700"
+    letter-spacing="7"
+    fill="#18365B"
+  >PTY.(LTD)</text>
+</svg>

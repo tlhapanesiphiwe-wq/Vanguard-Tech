@@ -1,0 +1,20 @@
+<svg viewBox="0 0 360 260" width="360" height="260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="ribbonShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="-3" dy="4" stdDeviation="3" flood-color="#0E1F35" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Left Chevron (Navy #18365B) -->
+  <path
+    d="M 140 220 L 50 48 L 88 72 L 80 84 L 140 168 L 200 84 L 192 72 L 230 48 Z"
+    fill="#18365B"
+  />
+
+  <!-- Right Chevron (Slate Blue #4C6E8E) with shadow on the overlap -->
+  <path
+    d="M 220 220 L 130 48 L 168 72 L 160 84 L 220 168 L 280 84 L 272 72 L 310 48 Z"
+    fill="#4C6E8E"
+    filter="url(#ribbonShadow)"
+  />
+</svg>
