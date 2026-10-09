@@ -2,14 +2,15 @@ import React from 'react';
 import { PageId } from '../types';
 import { VanguardLogo } from './VanguardLogo';
 import { COMPANY_INFO, PACKAGES } from '../data/company';
-import { Phone, Mail, MapPin, ArrowUpRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUpRight, ShieldCheck, CheckCircle2, Award, Search, FileCode } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (page: PageId) => void;
   onOpenQuoteModal: (packageId?: string) => void;
+  onOpenSearchConsole?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuoteModal }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuoteModal, onOpenSearchConsole }) => {
   const currentYear = new Date().getFullYear();
 
   const handleNav = (page: PageId) => {
@@ -30,9 +31,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuoteModal }) 
               Vanguard Tech Pty.(Ltd) delivers professional, scalable, and modern web, e-commerce, and AI automation solutions engineered for South African businesses.
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-slate-800/80 border border-slate-700/80 text-xs font-mono text-slate-200">
-              <span className="text-[#94A3B8]">CIPC Reg:</span>
-              <span className="font-semibold text-white">{COMPANY_INFO.registrationNumber}</span>
+            {/* Company Credentials: Registration & B-BBEE Level 1 */}
+            <div className="flex flex-wrap items-center gap-2 pt-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-slate-800/80 border border-slate-700/80 text-xs font-mono text-slate-200">
+                <span className="text-[#94A3B8]">CIPC Reg:</span>
+                <span className="font-semibold text-white">{COMPANY_INFO.registrationNumber}</span>
+              </div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-emerald-950/60 border border-emerald-500/40 text-xs font-semibold text-emerald-300">
+                <Award className="w-3.5 h-3.5 text-amber-300" />
+                <span>B-BBEE Level 1 (135% Accredited)</span>
+              </div>
             </div>
 
             <div className="pt-2">
@@ -79,10 +87,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuoteModal }) 
             </ul>
           </div>
 
-          {/* Col 4: Quick Navigation */}
+          {/* Col 4: Quick Navigation & Search Console */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#94A3B8]">
-              Company
+              Company & SEO
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
@@ -133,6 +141,28 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuoteModal }) 
                   Contact & Location
                 </button>
               </li>
+              {onOpenSearchConsole && (
+                <li className="pt-2 border-t border-slate-800">
+                  <button
+                    onClick={onOpenSearchConsole}
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-300 hover:text-white transition-colors"
+                  >
+                    <Search className="w-3.5 h-3.5" />
+                    <span>Search Console & Indexing</span>
+                  </button>
+                </li>
+              )}
+              <li>
+                <a
+                  href="/sitemap.xml"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-slate-200 transition-colors"
+                >
+                  <FileCode className="w-3.5 h-3.5" />
+                  <span>Sitemap XML</span>
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -173,7 +203,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuoteModal }) 
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 sm:gap-6">
             <span className="flex items-center gap-1.5 text-slate-300">
               <ShieldCheck className="w-4 h-4 text-blue-400" />
-              <span>CIPC Registered Company (K2026516671)</span>
+              <span>CIPC Reg: K2026516671</span>
+            </span>
+            <span className="flex items-center gap-1.5 text-amber-300 font-medium">
+              <Award className="w-4 h-4 text-amber-400" />
+              <span>B-BBEE Level 1 (135% Recognition)</span>
             </span>
             <span className="flex items-center gap-1.5 text-slate-300">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
@@ -188,7 +222,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuoteModal }) 
           <div className="text-center md:text-right text-slate-400">
             <p>© {currentYear} {COMPANY_INFO.legalName}. All rights reserved.</p>
             <p className="text-[11px] text-slate-400 pt-0.5">
-              Built Beyond Limits for South African Businesses.
+              Build Beyond Limits for South African Businesses.
             </p>
           </div>
         </div>

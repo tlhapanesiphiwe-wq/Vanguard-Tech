@@ -6,6 +6,7 @@ import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { QuoteModal } from './components/QuoteModal';
 import { CaseStudyModal } from './components/CaseStudyModal';
+import { SearchConsoleModal } from './components/SearchConsoleModal';
 import { HomePage } from './pages/HomePage';
 import { ServicesPage } from './pages/ServicesPage';
 import { AboutPage } from './pages/AboutPage';
@@ -16,6 +17,7 @@ import { ContactPage } from './pages/ContactPage';
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageId>('home');
   const [quoteModalOpen, setQuoteModalOpen] = useState<boolean>(false);
+  const [searchConsoleModalOpen, setSearchConsoleModalOpen] = useState<boolean>(false);
   const [initialPackageForModal, setInitialPackageForModal] = useState<string>('growth-engine');
   const [activeCaseStudy, setActiveCaseStudy] = useState<CaseStudy | null>(null);
 
@@ -101,6 +103,7 @@ export default function App() {
       <Footer
         onNavigate={handleNavigate}
         onOpenQuoteModal={handleOpenQuoteModal}
+        onOpenSearchConsole={() => setSearchConsoleModalOpen(true)}
       />
 
       {/* Floating 1-Click WhatsApp Button */}
@@ -118,6 +121,12 @@ export default function App() {
         caseStudy={activeCaseStudy}
         onClose={() => setActiveCaseStudy(null)}
         onOpenQuoteModal={handleOpenQuoteModal}
+      />
+
+      {/* Google Search Console, Analytics & Indexing Command Center */}
+      <SearchConsoleModal
+        isOpen={searchConsoleModalOpen}
+        onClose={() => setSearchConsoleModalOpen(false)}
       />
     </div>
   );

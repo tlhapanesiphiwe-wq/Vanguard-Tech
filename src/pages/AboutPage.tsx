@@ -279,17 +279,23 @@ export const AboutPage: React.FC<AboutPageProps> = ({
         </div>
       </section>
 
-      {/* Compliance & POPIA Commitment */}
+      {/* Compliance, B-BBEE & POPIA Commitment */}
       <section className="py-14 bg-white border-t border-slate-200">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-4">
-          <div className="inline-flex items-center justify-center p-3 rounded-full bg-slate-100 text-[#18365B] mb-1">
-            <ShieldCheck className="w-6 h-6 text-[#4C6E8E]" />
+          <div className="flex items-center justify-center gap-2 mb-1">
+            <div className="inline-flex items-center justify-center p-3 rounded-full bg-slate-100 text-[#18365B]">
+              <ShieldCheck className="w-6 h-6 text-[#4C6E8E]" />
+            </div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-300 text-xs font-bold text-emerald-800">
+              <Award className="w-4 h-4 text-amber-500" />
+              <span>B-BBEE Level 1 Accredited (135% Recognition)</span>
+            </div>
           </div>
           <h3 className="text-2xl font-display font-bold text-[#18365B]">
-            Strict Statutory Compliance & Governance
+            Strict Statutory Compliance, B-BBEE Level 1 & Governance
           </h3>
           <p className="text-xs sm:text-sm text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Vanguard Tech Pty.(Ltd) operates under the Companies Act of South Africa (Registration: K2026516671). We adhere rigorously to the Protection of Personal Information Act (POPIA), ensuring enterprise-grade client data confidentiality, secure invoicing, and ethical governance across all digital engagements.
+            Vanguard Tech Pty.(Ltd) operates under the Companies Act of South Africa (Registration: K2026516671) and is a verified <strong>B-BBEE Level 1 contributor (135% preferential procurement recognition)</strong>. We adhere rigorously to the Protection of Personal Information Act (POPIA), ensuring enterprise-grade client data confidentiality, secure invoicing, and ethical governance across all digital engagements.
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">

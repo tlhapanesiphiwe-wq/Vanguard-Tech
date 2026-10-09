@@ -161,10 +161,18 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                   </div>
                 </div>
 
-                {/* Statutory Registration Pill */}
-                <div className="pt-3 border-t border-slate-200 text-[11px] text-slate-500 flex items-center justify-between">
-                  <span>CIPC Registration:</span>
-                  <span className="font-mono font-bold text-slate-800">{COMPANY_INFO.registrationNumber}</span>
+                {/* Statutory Registration & B-BBEE Pill */}
+                <div className="pt-3 border-t border-slate-200 text-[11px] text-slate-600 space-y-1.5">
+                  <div className="flex items-center justify-between">
+                    <span>CIPC Registration:</span>
+                    <span className="font-mono font-bold text-slate-800">{COMPANY_INFO.registrationNumber}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>B-BBEE Accreditation:</span>
+                    <span className="font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">
+                      Level 1 (135% Recognition)
+                    </span>
+                  </div>
                 </div>
               </div>
 

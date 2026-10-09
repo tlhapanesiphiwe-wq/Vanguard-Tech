@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PageId, CaseStudy } from '../types';
 import { CASE_STUDIES } from '../data/company';
+import { SocialProofSection } from '../components/SocialProofSection';
 import {
   ArrowRight,
   CheckCircle2,
@@ -151,6 +152,14 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Social Proof: Client Testimonials, Screenshots, Before & After */}
+          <div className="mt-16">
+            <SocialProofSection
+              onOpenQuoteModal={onOpenQuoteModal}
+              onNavigateContact={() => onNavigate('contact')}
+            />
           </div>
 
           {/* Placeholders Note for Future Expansion */}

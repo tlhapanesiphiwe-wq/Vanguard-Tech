@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Homepage -->
+  <url>
+    <loc>https://ais-pre-fqaewxz4e5vjcpnenejqxi-317181760215.europe-west2.run.app/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Services & Packages -->
+  <url>
+    <loc>https://ais-pre-fqaewxz4e5vjcpnenejqxi-317181760215.europe-west2.run.app/services</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- About & Leadership -->
+  <url>
+    <loc>https://ais-pre-fqaewxz4e5vjcpnenejqxi-317181760215.europe-west2.run.app/about</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Portfolio & Case Studies -->
+  <url>
+    <loc>https://ais-pre-fqaewxz4e5vjcpnenejqxi-317181760215.europe-west2.run.app/portfolio</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <!-- Process -->
+  <url>
+    <loc>https://ais-pre-fqaewxz4e5vjcpnenejqxi-317181760215.europe-west2.run.app/process</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Contact & Location -->
+  <url>
+    <loc>https://ais-pre-fqaewxz4e5vjcpnenejqxi-317181760215.europe-west2.run.app/contact</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

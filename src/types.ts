@@ -71,3 +71,43 @@ export interface FAQItem {
   answer: string;
   category: 'Pricing' | 'Process' | 'Hosting & Tech' | 'Support';
 }
+
+export interface WhyChoosePoint {
+  id: string;
+  title: string;
+  highlight: string;
+  badge: string;
+  description: string;
+  benefits: string[];
+  statLabel: string;
+  statValue: string;
+  iconName: string;
+}
+
+export interface SocialProofTestimonial {
+  id: string;
+  clientName: string;
+  role: string;
+  companyName: string;
+  industry: string;
+  location: string;
+  avatarText: string;
+  rating: number;
+  review: string;
+  projectType: string;
+  projectYear: string;
+  before: {
+    title: string;
+    description: string;
+    metrics: { label: string; value: string }[];
+    painPoints: string[];
+    screenshotUrl?: string;
+  };
+  after: {
+    title: string;
+    description: string;
+    metrics: { label: string; value: string }[];
+    keyImprovements: string[];
+    screenshotUrl?: string;
+  };
+}

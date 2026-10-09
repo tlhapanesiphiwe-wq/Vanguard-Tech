@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { PageId } from '../types';
 import { VanguardLogo } from './VanguardLogo';
 import { COMPANY_INFO } from '../data/company';
-import { Phone, Menu, X, ArrowRight, MessageCircle } from 'lucide-react';
+import { Phone, Menu, X, ArrowRight, MessageCircle, Award, ShieldCheck } from 'lucide-react';
 
 interface NavbarProps {
   currentPage: PageId;
@@ -44,19 +44,52 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header
       id="main-navigation-header"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm py-3 border-b border-slate-100'
-          : 'bg-white py-4 border-b border-slate-100'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo */}
-        <VanguardLogo
-          onClick={() => handleNavClick('home')}
-          size="md"
-          className="cursor-pointer"
-        />
+      {/* Top Trust & Statutory Strip */}
+      <div className="bg-[#0F223D] text-slate-300 text-[11px] py-1.5 px-4 border-b border-slate-800/80 hidden sm:block">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex items-center gap-1.5 font-medium text-slate-200">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>Proudly South African Business</span>
+            </span>
+            <span className="text-slate-600">|</span>
+            <span className="inline-flex items-center gap-1 font-semibold text-amber-300">
+              <Award className="w-3 h-3 text-amber-400" />
+              <span>B-BBEE Level 1 (135% Accredited)</span>
+            </span>
+            <span className="text-slate-600">|</span>
+            <span className="font-mono text-slate-400">CIPC: {COMPANY_INFO.registrationNumber}</span>
+          </div>
+
+          <div className="flex items-center gap-4 text-slate-300">
+            <span className="text-slate-400">Dedicated Founder Support</span>
+            <a
+              href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
+              className="text-white hover:text-blue-300 font-mono font-semibold"
+            >
+              {COMPANY_INFO.phone}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation Bar */}
+      <div
+        className={`transition-all duration-300 ${
+          isScrolled
+            ? 'bg-white/95 backdrop-blur-md shadow-sm py-2.5 border-b border-slate-100'
+            : 'bg-white py-3.5 border-b border-slate-100'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+          {/* Brand Logo */}
+          <VanguardLogo
+            onClick={() => handleNavClick('home')}
+            size="md"
+            className="cursor-pointer"
+          />
 
         {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
@@ -122,6 +155,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </button>
         </div>
       </div>
+    </div>
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (

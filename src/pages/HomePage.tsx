@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { PageId, ServicePackage, CaseStudy } from '../types';
 import { COMPANY_INFO, PACKAGES, BROADER_CAPABILITIES, CASE_STUDIES } from '../data/company';
 import { VanguardLogo } from '../components/VanguardLogo';
+import { WhyChooseUs } from '../components/WhyChooseUs';
+import { SocialProofSection } from '../components/SocialProofSection';
 import {
   ArrowRight,
   CheckCircle2,
@@ -120,23 +122,23 @@ export const HomePage: React.FC<HomePageProps> = ({
               <div className="p-3 rounded-lg bg-white border border-slate-200/80">
                 <div className="flex items-center gap-2 text-xs font-semibold text-slate-900">
                   <ShieldCheck className="w-4 h-4 text-[#4C6E8E]" />
-                  <span>CIPC Registered</span>
+                  <span>CIPC Registered SA</span>
                 </div>
                 <p className="text-[11px] text-slate-500 mt-0.5 font-mono">Reg: {COMPANY_INFO.registrationNumber}</p>
               </div>
 
-              <div className="p-3 rounded-lg bg-white border border-slate-200/80">
-                <div className="flex items-center gap-2 text-xs font-semibold text-slate-900">
-                  <Award className="w-4 h-4 text-emerald-600" />
-                  <span>Transparent ZAR</span>
+              <div className="p-3 rounded-lg bg-emerald-50/60 border border-emerald-200">
+                <div className="flex items-center gap-2 text-xs font-semibold text-emerald-900">
+                  <Award className="w-4 h-4 text-amber-500" />
+                  <span>B-BBEE Level 1</span>
                 </div>
-                <p className="text-[11px] text-slate-500 mt-0.5">Fixed pricing from R4,500</p>
+                <p className="text-[11px] text-emerald-700 mt-0.5 font-medium">135% Accredited spend</p>
               </div>
 
               <div className="p-3 rounded-lg bg-white border border-slate-200/80">
                 <div className="flex items-center gap-2 text-xs font-semibold text-slate-900">
                   <Zap className="w-4 h-4 text-amber-500" />
-                  <span>Speed Optimized</span>
+                  <span>Mobile & Desktop</span>
                 </div>
                 <p className="text-[11px] text-slate-500 mt-0.5">Sub-2s page load speeds</p>
               </div>
@@ -144,7 +146,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <div className="p-3 rounded-lg bg-white border border-slate-200/80">
                 <div className="flex items-center gap-2 text-xs font-semibold text-slate-900">
                   <Phone className="w-4 h-4 text-blue-600" />
-                  <span>Local Leadership</span>
+                  <span>Dedicated Support</span>
                 </div>
                 <p className="text-[11px] text-slate-500 mt-0.5">Direct line: {COMPANY_INFO.phone}</p>
               </div>
@@ -152,6 +154,12 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
         </div>
       </section>
+
+      {/* WHY CHOOSE VANGUARD SECTION */}
+      <WhyChooseUs
+        onOpenQuoteModal={onOpenQuoteModal}
+        onNavigateContact={() => onNavigate('contact')}
+      />
 
       {/* 2. CORE SERVICES & PACKAGES (Main Conversion Focus) */}
       <section id="packages-section" className="py-20 bg-white">
@@ -487,88 +495,11 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
-      {/* 5. FEATURED CASE STUDIES TEASER */}
-      <section className="py-20 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-            <div>
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-slate-100 text-[#4C6E8E] text-xs font-bold uppercase tracking-wider mb-2">
-                <span>Proven Impact</span>
-              </div>
-              <h2 className="text-3xl font-display font-bold text-[#18365B]">
-                Selected Work & South African Case Studies
-              </h2>
-              <p className="text-sm text-slate-600 mt-1">
-                Real solutions engineered for measurable commercial expansion.
-              </p>
-            </div>
-
-            <button
-              onClick={() => onNavigate('portfolio')}
-              className="mt-4 md:mt-0 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#18365B] hover:text-[#4C6E8E]"
-            >
-              <span>View All Case Studies</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {CASE_STUDIES.slice(0, 2).map((cs) => (
-              <div
-                key={cs.id}
-                onClick={() => onSelectCaseStudy(cs)}
-                className="bg-white rounded-xl border border-slate-200 p-6 sm:p-8 hover:border-slate-300 hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#4C6E8E] bg-slate-100 px-2.5 py-0.5 rounded">
-                      {cs.category}
-                    </span>
-                    <span className="text-xs text-slate-400">
-                      {cs.industry}
-                    </span>
-                  </div>
-
-                  <h3 className="text-xl font-display font-bold text-[#18365B] group-hover:text-[#4C6E8E] transition-colors">
-                    {cs.title}
-                  </h3>
-                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                    {cs.summary}
-                  </p>
-
-                  {/* Metrics Row */}
-                  <div className="grid grid-cols-3 gap-2 my-5 p-3 rounded-lg bg-slate-50 border border-slate-100 text-center">
-                    {cs.metrics.map((m, mIdx) => (
-                      <div key={mIdx}>
-                        <div className="text-base sm:text-lg font-display font-bold text-[#18365B]">
-                          {m.value}
-                        </div>
-                        <div className="text-[10px] text-slate-500 font-medium">
-                          {m.label}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="pt-2 flex items-center justify-between border-t border-slate-100">
-                  <div className="flex flex-wrap gap-1">
-                    {cs.technologies.slice(0, 2).map((tech, tIdx) => (
-                      <span key={tIdx} className="text-[10px] text-slate-500 font-mono">
-                        #{tech}
-                      </span>
-                    ))}
-                  </div>
-                  <span className="text-xs font-bold text-[#18365B] group-hover:translate-x-1 transition-transform flex items-center gap-1">
-                    <span>View Case Study</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* 5. SOCIAL PROOF & TESTIMONIALS SECTION (Client Names, Reviews, Screenshots, Before & After) */}
+      <SocialProofSection
+        onOpenQuoteModal={onOpenQuoteModal}
+        onNavigateContact={() => onNavigate('contact')}
+      />
 
       {/* 6. FOUNDERS / LEADERSHIP STRIP */}
       <section className="py-20 bg-white border-t border-slate-100">

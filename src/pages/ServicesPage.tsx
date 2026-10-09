@@ -60,16 +60,22 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       complete: true,
     },
     {
+      feature: 'B-BBEE Level 1 (135% Recognition)',
+      starter: true,
+      growth: true,
+      complete: true,
+    },
+    {
       feature: 'Contact Form & Google Maps Embed',
       starter: true,
       growth: true,
       complete: true,
     },
     {
-      feature: 'Core SEO Setup & Indexing',
-      starter: 'Basic Setup',
-      growth: 'Comprehensive Core SEO',
-      complete: 'Advanced Technical SEO & Schema',
+      feature: 'Core SEO & Google Search Console Setup',
+      starter: 'Basic Indexing',
+      growth: 'Core SEO + Sitemap Submission',
+      complete: 'Advanced Technical SEO & Full Indexing',
     },
     {
       feature: 'Brand Alignment & Design Customization',

@@ -1,10 +1,13 @@
-import { ServicePackage, BroaderCapability, TeamMember, CaseStudy, ProcessStep, FAQItem } from '../types';
+import { ServicePackage, BroaderCapability, TeamMember, CaseStudy, ProcessStep, FAQItem, WhyChoosePoint, SocialProofTestimonial } from '../types';
 
 export const COMPANY_INFO = {
   legalName: 'Vanguard Tech Pty.(Ltd)',
   tradingName: 'Vanguard Tech Pty.(Ltd)',
   shortName: 'Vanguard Tech',
   registrationNumber: 'K2026516671',
+  bbbeeLevel: 'B-BBEE Level 1',
+  bbbeeAccreditation: '135% Procurement Recognition',
+  bbbeeFullStatus: 'B-BBEE Level 1 Accredited (135% Procurement Recognition)',
   tagline: 'Build Beyond Limits',
   phone: '068 075 6718',
   internationalPhone: '+27680756718',
@@ -16,6 +19,7 @@ export const COMPANY_INFO = {
   foundedYear: '2026',
   whatsappNumber: '27680756718',
   whatsappDirectUrl: 'https://wa.me/27680756718?text=Hello%20Vanguard%20Tech%20Pty.(Ltd),%20I%20would%20like%20to%20enquire%20about%20your%20digital%20solutions.',
+  websiteUrl: 'https://ais-pre-fqaewxz4e5vjcpnenejqxi-317181760215.europe-west2.run.app',
 };
 
 export const PACKAGES: ServicePackage[] = [
@@ -367,3 +371,270 @@ export const FAQS: FAQItem[] = [
     answer: 'You can submit a quote request on this website, send us a direct message on WhatsApp at 068 075 6718, or call CEO Mpumelelo Mabaso directly. We will schedule a brief 15-minute discovery consultation to determine the ideal package for your business.'
   }
 ];
+
+export const WHY_CHOOSE_POINTS: WhyChoosePoint[] = [
+  {
+    id: 'south-african-business',
+    title: 'Proudly South African Business',
+    highlight: 'Rooted in Local Commerce & Market Realities',
+    badge: '100% Local Enterprise',
+    description: 'We are a fully registered South African entity (CIPC Reg: K2026516671) operating in ZAR with zero unpredictable exchange-rate markups. We know how South African consumers and procurement teams think, buy, and convert.',
+    benefits: [
+      'Transparent ZAR fixed pricing with no dollar conversion surprises',
+      'Native South African payment gateways (PayFast, Yoco, Ozow, Peach)',
+      'Couriers & logistics integration (The Courier Guy, Fastway)',
+      'Local Johannesburg time zone (SAST) availability and responsiveness'
+    ],
+    statLabel: 'Local Market Experience',
+    statValue: '100%',
+    iconName: 'Building2'
+  },
+  {
+    id: 'bbbee-level-1',
+    title: 'B-BBEE Level 1 (135% Accredited)',
+    highlight: 'Maximum Preferential Procurement Scorecard Points',
+    badge: '135% Recognition',
+    description: 'Vanguard Tech Pty.(Ltd) is a certified B-BBEE Level 1 Contributor. Every rand your corporate or government entity spends with us qualifies for 135% preferential procurement recognition on your scorecard.',
+    benefits: [
+      '135% B-BBEE preferential procurement recognition spend',
+      'Full compliance verification and formal documentation provided',
+      'Enhances your corporate Broad-Based Black Economic Empowerment scorecard',
+      'POPIA & Companies Act aligned governance and statutory transparency'
+    ],
+    statLabel: 'Procurement Recognition',
+    statValue: '135%',
+    iconName: 'Award'
+  },
+  {
+    id: 'mobile-friendly',
+    title: 'Mobile Friendly Architecture',
+    highlight: 'Sub-2s Mobile Speeds Built for South African Data Networks',
+    badge: 'Mobile-First UI/UX',
+    description: 'Over 80% of South African internet users browse and buy via mobile smartphones on cellular networks. We engineer touch-first, lightweight interfaces with zero layout shift and rapid mobile loading.',
+    benefits: [
+      'Lightning-fast page rendering optimized for mobile data saving',
+      'One-tap WhatsApp direct inquiries and click-to-call integrations',
+      'Fluid thumb-navigation, sticky action bars, and swipe gestures',
+      'Tested across entry-level Android devices and modern iPhones'
+    ],
+    statLabel: 'Mobile Performance Score',
+    statValue: '99/100',
+    iconName: 'Smartphone'
+  },
+  {
+    id: 'desktop-friendly',
+    title: 'Desktop Friendly & Ultrawide',
+    highlight: 'Executive Clarity on Widescreen & Office Monitors',
+    badge: 'Enterprise Presentation',
+    description: 'Corporate buyers, procurement managers, and B2B clients review proposals and catalogs on widescreen desktop monitors. Our responsive layouts expand seamlessly into rich multi-column executive interfaces.',
+    benefits: [
+      'Pixel-perfect scaling for 1080p, 1440p, 4K, and ultrawide workstations',
+      'Keyboard navigation, accessible tab order, and rich data tables',
+      'Multi-column side-by-side comparison matrices and interactive views',
+      'High-resolution vector assets and crisp typography rendering'
+    ],
+    statLabel: 'Screen Adaptability',
+    statValue: '4K Ready',
+    iconName: 'Monitor'
+  },
+  {
+    id: 'dedicated-support',
+    title: 'Dedicated Direct Support',
+    highlight: 'Direct Founder Oversight, Never Outsourced',
+    badge: 'Direct Leadership Access',
+    description: 'You partner directly with CEO Mpumelelo Mabaso and CTO Siphiwe Tlhapane. We do not pass your business to junior subcontractors or offshore ticket queues. We provide monthly maintenance, uptime monitoring, and proactive updates.',
+    benefits: [
+      'Direct WhatsApp and phone line to executive leadership',
+      'Monthly maintenance and security vulnerability patching included',
+      '99.9% uptime monitoring and automated daily off-site backups',
+      'Rapid SLA response times for content updates and technical fixes'
+    ],
+    statLabel: 'Founder Availability',
+    statValue: '24/7 Monitored',
+    iconName: 'Headphones'
+  }
+];
+
+export const SOCIAL_PROOF_TESTIMONIALS: SocialProofTestimonial[] = [
+  {
+    id: 'aurora-logistics',
+    clientName: 'Kaveer Naidoo',
+    role: 'Operations Director',
+    companyName: 'Aurora Supply Chain Group',
+    industry: 'Transport & Cross-Border Logistics',
+    location: 'Johannesburg, Gauteng',
+    avatarText: 'KN',
+    rating: 5,
+    projectType: '8-Page Corporate Freight Platform',
+    projectYear: '2026',
+    review: 'Before partnering with Vanguard Tech, our outdated website was actively costing us multi-million rand corporate tenders. Vanguard re-architected our platform with an instant freight rate estimator and mobile dispatch flow. Our corporate leads surged by 140% in 60 days, and our load speed dropped from nearly 7 seconds to 1.2s.',
+    before: {
+      title: 'Legacy Clunky Template (Pre-Vanguard)',
+      description: 'Slow 2014 WordPress installation with broken tables, no mobile responsiveness, missing SSL warnings, and zero lead capture automation.',
+      metrics: [
+        { label: 'Page Load Time', value: '6.8s' },
+        { label: 'Mobile Usability', value: 'Failed Core Vitals' },
+        { label: 'Tender Inquiries', value: '2 / month' },
+        { label: 'Bounce Rate', value: '68%' }
+      ],
+      painPoints: [
+        'Enterprise clients complained site looked insecure and abandoned',
+        'Mobile visitors had to pinch-to-zoom to read freight tables',
+        'Inbound tender inquiries were lost in spam folder'
+      ],
+      screenshotUrl: '/assets/aurora-before.png'
+    },
+    after: {
+      title: 'Modern High-Speed Corporate Platform (Post-Vanguard)',
+      description: 'Clean Next-generation architecture with instant freight rate calculator, WhatsApp dispatch triggers, 100% mobile perfection, and B-BBEE Level 1 trust badges.',
+      metrics: [
+        { label: 'Page Load Time', value: '1.2s (Sub-2s)' },
+        { label: 'Mobile Usability', value: '100/100 Core Vitals' },
+        { label: 'Tender Inquiries', value: '14+ / month (+140%)' },
+        { label: 'Bounce Rate', value: '21%' }
+      ],
+      keyImprovements: [
+        'Instant online freight rate estimation module',
+        'Real-time WhatsApp dispatch integration connecting clients to team',
+        'Ranked Page 1 on Google for commercial freight Durban-Gauteng'
+      ],
+      screenshotUrl: '/assets/aurora-after.png'
+    }
+  },
+  {
+    id: 'kalahari-crafted',
+    clientName: 'Lize Van Der Merwe',
+    role: 'Founder & Creative Director',
+    companyName: 'Kalahari Crafted Apparel',
+    industry: 'Premium South African Retail & Leatherwork',
+    location: 'Stellenbosch, Western Cape',
+    avatarText: 'LM',
+    rating: 5,
+    projectType: 'Custom E-Commerce Storefront',
+    projectYear: '2026',
+    review: 'We were losing customers during checkout because our previous store was clunky on smartphones and forced customers through multiple currency conversion screens. Vanguard Tech built a lightning-fast storefront with PayFast and Yoco one-click checkout. Mobile conversions jumped 78% and cart abandonment plummeted.',
+    before: {
+      title: 'Clunky Multi-Step Checkout (Pre-Vanguard)',
+      description: 'Bloated overseas theme with sluggish checkout steps, no local courier rate calculations, and high shopping cart drop-offs on mobile devices.',
+      metrics: [
+        { label: 'Cart Abandonment', value: '72%' },
+        { label: 'Mobile Checkout Speed', value: '14 steps' },
+        { label: 'Monthly Online Revenue', value: 'R48,000' },
+        { label: 'Mobile Load Time', value: '5.4s' }
+      ],
+      painPoints: [
+        'Customers abandoned checkout due to slow PayFast redirects',
+        'No automated Courier Guy waybill creation led to packing delays',
+        'Mobile catalog photos took 6+ seconds to render'
+      ],
+      screenshotUrl: '/assets/kalahari-before.png'
+    },
+    after: {
+      title: 'High-Converting SA E-Commerce Engine (Post-Vanguard)',
+      description: 'Bespoke lightweight retail storefront with 2-step mobile checkout, PayFast + Yoco + Ozow instant EFT, and automated shipping parcel tracking.',
+      metrics: [
+        { label: 'Cart Abandonment', value: '28% (-35% drop)' },
+        { label: 'Mobile Checkout Speed', value: '2-step one-click' },
+        { label: 'Monthly Online Revenue', value: 'R135,000+ (2.8x)' },
+        { label: 'Mobile Load Time', value: '1.1s' }
+      ],
+      keyImprovements: [
+        'Seamless South African payment gateways with instant EFT',
+        'Automated Courier Guy integration with live tracking SMS notifications',
+        '78% boost in smartphone shopper checkout completion'
+      ],
+      screenshotUrl: '/assets/kalahari-after.png'
+    }
+  },
+  {
+    id: 'nexus-legal',
+    clientName: 'Adv. Sipho Dlamini',
+    role: 'Managing Partner',
+    companyName: 'Nexus Commercial Law Advisory',
+    industry: 'Corporate & Regulatory Law',
+    location: 'Sandton, Johannesburg',
+    avatarText: 'SD',
+    rating: 5,
+    projectType: 'Bespoke Law Practice Portal',
+    projectYear: '2026',
+    review: 'Corporate law requires unwavering professionalism and strict POPIA compliance. Vanguard Tech built an authoritative digital presence that showcases our retainer offerings and provides encrypted consultation booking. They delivered on time, within budget, and with outstanding technical precision.',
+    before: {
+      title: 'Generic Outdated Web Card (Pre-Vanguard)',
+      description: 'Single-page generic static site with unencrypted email forms, zero practice area structure, and no Google search footprint in the Sandton area.',
+      metrics: [
+        { label: 'Google Search Rank', value: 'Not in Top 100' },
+        { label: 'Consultation Bookings', value: '4 / month' },
+        { label: 'POPIA Compliance', value: 'Unverified' },
+        { label: 'Avg Session Time', value: '42 seconds' }
+      ],
+      painPoints: [
+        'Prospective corporate clients questioned firm stature and capabilities',
+        'Sensitive client briefing details submitted over non-encrypted forms',
+        'Zero inbound leads from organic Google searches'
+      ],
+      screenshotUrl: '/assets/nexus-before.png'
+    },
+    after: {
+      title: 'Enterprise Legal Advisory Ecosystem (Post-Vanguard)',
+      description: '7-Page authoritative practice site with structured expertise silos, encrypted client onboarding, and automated consultation scheduling.',
+      metrics: [
+        { label: 'Google Search Rank', value: 'Top 3 for Sandton B2B' },
+        { label: 'Consultation Bookings', value: '19 / month (+92%)' },
+        { label: 'POPIA Compliance', value: '100% Encrypted' },
+        { label: 'Avg Session Time', value: '3m 45s' }
+      ],
+      keyImprovements: [
+        'Secure POPIA-compliant encrypted client briefing intake workflow',
+        'Automated consultation calendar integration syncing with partners',
+        'Substantial boost in high-retainer commercial client acquisitions'
+      ],
+      screenshotUrl: '/assets/nexus-after.png'
+    }
+  },
+  {
+    id: 'apex-capital',
+    clientName: 'Markus Botha',
+    role: 'Head of Operations',
+    companyName: 'Apex Capital Partners',
+    industry: 'Financial Advisory & Wealth Planning',
+    location: 'Rosebank, Johannesburg',
+    avatarText: 'MB',
+    rating: 5,
+    projectType: 'AI Lead Automation & Web Architecture',
+    projectYear: '2026',
+    review: 'Our wealth advisors were drowning in unqualified telephone queries while high-value after-hours leads vanished. CTO Siphiwe built a custom 24/7 AI lead qualification bot that pre-screens budgets and books meetings directly into our advisers calendars. We saved 18 hours per week and doubled our qualified appointments.',
+    before: {
+      title: 'Manual Inquiry Processing (Pre-Vanguard)',
+      description: 'Traditional contact form sending plain emails. Inquiries sat idle over weekends, and advisors spent 4+ hours daily vetting unqualified leads.',
+      metrics: [
+        { label: 'Lead Response Time', value: '12+ hours' },
+        { label: 'Qualified Lead Ratio', value: '22%' },
+        { label: 'Weekend Lead Retention', value: '45% lost' },
+        { label: 'Adviser Admin Overhead', value: '20 hrs/week' }
+      ],
+      painPoints: [
+        'High-net-worth investors moved to competitors if not contacted within 15 mins',
+        'Staff spent countless hours filtering spam and out-of-budget submissions',
+        'No tracking of marketing spend attribution'
+      ],
+      screenshotUrl: '/assets/apex-before.png'
+    },
+    after: {
+      title: 'Automated 24/7 AI Triage Pipeline (Post-Vanguard)',
+      description: 'Intelligent AI-driven intake assistant integrated with WhatsApp Business and CRM, instantly screening leads and booking qualified appointments.',
+      metrics: [
+        { label: 'Lead Response Time', value: '<30 seconds' },
+        { label: 'Qualified Lead Ratio', value: '68% (+115%)' },
+        { label: 'Weekend Lead Retention', value: '100% captured' },
+        { label: 'Adviser Admin Overhead', value: '2 hrs/week' }
+      ],
+      keyImprovements: [
+        'Real-time WhatsApp AI triage engaging prospects in under 30 seconds',
+        'Automated CRM deal pipeline syncing with verified investment brackets',
+        '18 hours of weekly manual adviser overhead eliminated'
+      ],
+      screenshotUrl: '/assets/apex-after.png'
+    }
+  }
+];
+
